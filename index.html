@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CUN 2026 · ICL · Vinculados</title>
+<style>
+:root{--bg:#000;--fg:#f5f5f7;--mute:#86868b;--line:#1d1d1f;--card:#111113;--blue:#2997ff;--green:#30d158;--orange:#ff9f0a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:center;gap:28px;padding:14px;background:rgba(0,0,0,.72);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+nav a{color:var(--mute);text-decoration:none;font-size:13px;letter-spacing:.02em;transition:color .2s}
+nav a:hover,nav a.on{color:var(--fg)}
+section{max-width:1040px;margin:auto;padding:110px 24px 60px}
+.eyebrow{color:var(--blue);font-weight:600;font-size:15px;margin:0 0 10px}
+h1,h2{margin:0;font-weight:700;letter-spacing:-.03em;line-height:1.05}
+h1{font-size:clamp(44px,8vw,96px)}
+h2{font-size:clamp(34px,5.5vw,64px)}
+.lead{color:var(--mute);font-size:clamp(18px,2.2vw,26px);line-height:1.35;max-width:720px;margin:18px 0 0;font-weight:500}
+.lead b{color:var(--fg)}
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;margin:64px 0 24px}
+.big{cursor:default}
+.big .v{font-size:clamp(48px,7vw,84px);font-weight:700;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.big .u{font-size:.4em;color:var(--mute);font-weight:600;margin-left:6px;letter-spacing:0}
+.big .l{color:var(--mute);margin-top:8px;font-size:15px}
+.panel{background:var(--card);border-radius:24px;padding:32px;margin-top:40px}
+.panel h3{margin:0 0 4px;font-size:22px;letter-spacing:-.02em}
+.panel p.s{margin:0 0 22px;color:var(--mute);font-size:14px}
+.seg{display:inline-flex;background:#1d1d1f;border-radius:10px;padding:3px;margin-bottom:22px}
+.seg button{border:0;background:none;color:var(--mute);font:inherit;font-size:13px;padding:7px 16px;border-radius:8px;cursor:pointer;transition:.2s}
+.seg button.on{background:#3a3a3c;color:var(--fg)}
+.row{display:grid;grid-template-columns:minmax(120px,240px) 1fr 96px;gap:14px;align-items:center;padding:7px 0;font-size:14px}
+.row .n{color:#d2d2d7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .t{height:10px;background:#1d1d1f;border-radius:6px;overflow:hidden}
+.row .t i{display:block;height:100%;width:0;background:var(--blue);border-radius:6px;transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.row .x{text-align:right;color:var(--fg);font-variant-numeric:tabular-nums;font-weight:500}
+.row:hover .n{color:#fff}.row:hover .t i{filter:brightness(1.3)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:820px){.two{grid-template-columns:1fr}.row{grid-template-columns:100px 1fr 80px}}
+.flow{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin:56px 0 8px}
+.flow .big .v{font-size:clamp(36px,5vw,60px)}
+.flow .arr{color:#3a3a3c;font-size:36px}
+.pair{margin:34px 0}
+.pair .h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.pair .h b{font-size:17px}
+.pair .h span{color:var(--orange);font-weight:700;font-size:28px;letter-spacing:-.02em}
+.pair .row{grid-template-columns:90px 1fr 110px}
+.pair .row.sat .t i{background:var(--green)}
+.note{color:var(--mute);font-size:13px;margin-top:18px;line-height:1.5}
+footer{text-align:center;color:#515154;font-size:12px;padding:60px 0 80px}
+#tip{position:fixed;pointer-events:none;background:#2c2c2e;color:#fff;padding:9px 13px;border-radius:10px;font-size:13px;opacity:0;transition:opacity .15s;z-index:20;box-shadow:0 8px 30px rgba(0,0,0,.6)}
+</style></head><body>
+<nav><a href="#icl" class="on">ICL</a><a href="#vinc">Vinculados</a></nav>
+
+<section id="icl">
+<p class="eyebrow">01 · ICL</p>
+<h1>193,506 unidades.</h1>
+<p class="lead">Sin duplicados. Casi <b>20 millones de m²</b> construidos sobre <b>8.7 millones</b> de terreno.</p>
+<div class="hero">
+ <div class="big" data-t="193,506 unidades únicas, 0 duplicadas"><div class="v" id="k1">0</div><div class="l">Unidades</div></div>
+ <div class="big" data-t="Suma construida · promedio ≈ 102 m² por unidad"><div class="v" id="k2">0<span class="u">M m²</span></div><div class="l">Construcción</div></div>
+ <div class="big" data-t="Suma de terreno"><div class="v" id="k3">0<span class="u">M m²</span></div><div class="l">Terreno</div></div>
+</div>
+<div class="two">
+ <div class="panel"><h3>Por clasificación</h3><p class="s">m² construidos</p><div id="b-clas"></div></div>
+ <div class="panel"><h3>Usos principales</h3><p class="s">m² construidos</p><div id="b-usos"></div></div>
+</div>
+</section>
+
+<section id="vinc">
+<p class="eyebrow">02 · Vinculados</p>
+<h2>110,183 llaves en común.</h2>
+<p class="lead">El <b>88%</b> de las llaves SAT existe también en ICL. Pero el SAT reporta <b>1.8× más construcción</b> y <b>4× más terreno</b>.</p>
+<div class="panel">
+ <div class="pair"><div class="h"><b>Construcción</b><span id="r1"></span></div><div id="p1"></div></div>
+ <div class="pair"><div class="h"><b>Terreno</b><span id="r2"></span></div><div id="p2"></div></div>
+ <p class="note">SAT en MAX por llave. Con SUM serían 154.7 M m² de construcción y 200.9 M m² de terreno, una duplicación por condómino que no representa área real.</p>
+</div>
+</section>
+
+<footer>CUN 2026 · ICL · Vinculados</footer>
+<div id="tip"></div>
+
+<script>
+const D={"icl":{"n":193506,"const":19799308.98,"terr":8659450.94},"sat":{"filas":352686,"llaves":125158,"predios":171354,"const_sum":255802854.01,"terr_sum":337623451.83,"const_max":35200705.24,"terr_max":33803409.06},"vinc":{"n":110183,"icl_const":13626256.99,"icl_terr":6386319.97,"sat_const_sum":154688968.45,"sat_terr_sum":200929701.16,"sat_const_max":25012874.86,"sat_terr_max":25980191.76},
+"icl_sector":[{"k":"01","n":4886,"const":582244.8,"terr":223284.36},{"k":"02","n":2944,"const":477115.97,"terr":212835.37},{"k":"03","n":3767,"const":469435.9,"terr":378617.88},{"k":"04","n":12882,"const":1281827.54,"terr":404932.09},{"k":"05","n":18275,"const":2112577.94,"terr":387658.31},{"k":"06","n":44385,"const":2091937.93,"terr":467049.09},{"k":"07","n":8962,"const":1083389.14,"terr":1185845.69},{"k":"08","n":2976,"const":1523101.92,"terr":1470929.6},{"k":"09","n":2697,"const":783344.66,"terr":520714.79},{"k":"10","n":26194,"const":1307920.4,"terr":506019.8},{"k":"11","n":3317,"const":541845.14,"terr":89437.87},{"k":"12","n":5046,"const":708216.5,"terr":359241.96},{"k":"13","n":4017,"const":565874.08,"terr":155763.09},{"k":"14","n":6051,"const":735798.55,"terr":272505.83},{"k":"15","n":15717,"const":1574633.37,"terr":341462.81},{"k":"16","n":8792,"const":749093.96,"terr":377131.51},{"k":"17","n":6995,"const":826097.4,"terr":299634.45},{"k":"18","n":2801,"const":495885.74,"terr":254922.12},{"k":"19","n":3071,"const":421119.43,"terr":398582.19},{"k":"20","n":9731,"const":1467848.61,"terr":352882.13}],
+"icl_clas":[["Casa-habitación",60701,7066554.34],["Clínica, hospital, cine, industria, taller",6145,5449663.6],["Unidad catastral en edificio",50090,4605393.12],["Tienda, depósito y similares",75030,2675725.64],["Estación terrestre subterránea",80,1972.28],["Terreno",1460,0]],
+"icl_usos":[["Casa habitación",35513,5028968.4],["Vivienda en edificio",29303,2429178.87],["Comercial desocupado",25628,1083641.63],["Vivienda en quinta",13064,864093.25],["Inmueble desocupado",9683,824997.21],["Edificación del Gobierno Central",165,515045.92],["Industria textil y cuero",229,324436.61],["Alimentación y bebidas",4207,302420.44],["Cementerio",3,287076.28],["Industria metálica y maquinaria",155,283317.18]],
+"sat_usos":[["Vivienda",149698],["Puesto en galería comercial",44116],["Galería comercial",40790],["Otros usos comerciales",24781],["Mercado o campo ferial",17395],["Comercial no identificado",15010],["Cochera",11713],["Local de servicios",10090],["Puesto en mercado",7904],["Almacén o depósito",7350],["Restaurantes y bares",3499],["Oficina",2598],["Estacionamiento de oficinas",1917],["Depósito de vivienda",1786],["Taller",1505]]};
+const F=n=>Math.round(n).toLocaleString('es-PE'),M=n=>(n/1e6).toFixed(2)+' M';
+const tip=document.getElementById('tip');
+function showTip(e,t){tip.textContent=t;tip.style.opacity=1;const x=Math.min(e.clientX+14,innerWidth-tip.offsetWidth-10);tip.style.left=x+'px';tip.style.top=(e.clientY+14)+'px'}
+document.addEventListener('mousemove',e=>{const el=e.target.closest('[data-t]');if(el)showTip(e,el.dataset.t);else tip.style.opacity=0});
+document.addEventListener('click',e=>{const el=e.target.closest('[data-t]');if(el){showTip(e,el.dataset.t);setTimeout(()=>tip.style.opacity=0,2500)}});
+
+function bars(id,rows,fmt,cls){ // rows: [label,value,tipText]
+  const max=Math.max(...rows.map(r=>r[1]))||1,el=document.getElementById(id);
+  el.innerHTML=rows.map(r=>`<div class="row ${cls||''}" data-t="${r[2]||r[0]+': '+fmt(r[1])}"><div class="n">${r[0]}</div><div class="t"><i data-w="${(r[1]/max*100).toFixed(1)}"></i></div><div class="x">${fmt(r[1])}</div></div>`).join('');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>el.querySelectorAll('i').forEach(i=>i.style.width=i.dataset.w+'%')));
+}
+function count(id,to,dec,suffix){const el=document.getElementById(id),t0=performance.now();
+  (function f(t){const p=Math.min((t-t0)/1100,1),v=to*(1-Math.pow(1-p,4));el.firstChild.textContent=dec?v.toFixed(dec):Math.round(v).toLocaleString('es-PE');if(p<1)requestAnimationFrame(f)})(t0)}
+
+// ICL
+bars('b-clas',D.icl_clas.map(r=>[r[0],r[2],`${r[0]} · ${F(r[1])} unidades · ${F(r[2])} m²`]),F);
+bars('b-usos',D.icl_usos.map(r=>[r[0],r[2],`${r[0]} · ${F(r[1])} unidades · ${F(r[2])} m²`]),F);
+
+// Vinculados
+function pair(id,a,b,rid){
+  bars(id,[['ICL',a,'ICL: '+F(a)+' m²'],['SAT',b,'SAT (MAX): '+F(b)+' m²']],M);
+  document.querySelectorAll('#'+id+' .row')[1].classList.add('sat');
+  document.getElementById(rid).textContent=(b/a).toFixed(1)+'× SAT';
+}
+pair('p1',D.vinc.icl_const,D.vinc.sat_const_max,'r1');
+pair('p2',D.vinc.icl_terr,D.vinc.sat_terr_max,'r2');
+
+// Contadores
+count('k1',D.icl.n);
+(function(){const a=document.getElementById('k2'),b=document.getElementById('k3');
+ function run(el,to){const t0=performance.now();(function f(t){const p=Math.min((t-t0)/1100,1);el.firstChild.textContent=(to/1e6*(1-Math.pow(1-p,4))).toFixed(2);if(p<1)requestAnimationFrame(f)})(t0)}
+ run(a,D.icl.const);run(b,D.icl.terr)})();
+
+// Nav activa
+const links=[...document.querySelectorAll('nav a')];
+document.querySelectorAll('section').forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+s.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+</script></body></html>
